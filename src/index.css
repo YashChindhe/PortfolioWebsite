@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+}
+/* Work grid: constrained height only on desktop */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 640px) {
+  .work-grid {
+    height: clamp(300px, 82svh, 900px);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 639px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+  .work-card {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* Hero: no height on mobile, full viewport on desktop */
+.hero-section {
+  height: auto;
+}
+@media (min-width: 640px) {
+  .hero-section {
+    height: calc(100svh - clamp(44px, 7vh, 61px));
+  }
+}

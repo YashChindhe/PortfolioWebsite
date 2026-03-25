@@ -52,7 +52,7 @@ export const resumeData = {
     devops: ["Docker", "Kubernetes", "Jenkins", "Git"],
     cloud: ["AWS", "Azure"],
     testing: ["Pytest", "Robot Framework"],
-    frontend: ["HTML","CSS","Javascript","Typescript","React JS"],
+    frontend: ["HTML","CSS","Javascript","Typescript","React JS","Next JS"],
     ai: ["Deep Learning","Gen AI"]
   },
   certifications: [

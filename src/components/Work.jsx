@@ -1,32 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-
-const projects = [
-  {
-    title: 'AI Automation Workflow',
-    category: 'Development / AI',
-    image: 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=800&q=80',
-    link: '#'
-  },
-  {
-    title: 'Cloud Engine',
-    category: 'Infrastructure / DevOps',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
-    link: '#'
-  },
-  {
-    title: 'Log Intelligence Platform',
-    category: 'Full Stack AI',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
-    link: '#'
-  },
-  {
-    title: 'Microservice Dashboard',
-    category: 'Systems / Backend',
-    image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80',
-    link: '#'
-  }
-]
+import projects from '../data/projects'
 
 const Work = () => {
   const [activeCard, setActiveCard] = useState(null)
@@ -77,10 +51,10 @@ const Work = () => {
               className={`w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-[1.04] ${isActive ? 'scale-[1.04]' : 'scale-100'}`}
             />
             {/* Hover overlay */}
-            <div className={`absolute inset-0 transition-all duration-500 flex items-end lg:group-hover:bg-black/45 ${isActive ? 'bg-black/45' : 'bg-black/0'}`}
+            <div className={`absolute inset-0 transition-all duration-500 flex items-end ${isActive ? 'bg-black/45 backdrop-blur-sm' : 'bg-black/0'} lg:group-hover:bg-black/45 lg:group-hover:backdrop-blur-sm`}
               style={{ padding: 'clamp(12px, 2vw, 24px)' }}
             >
-              <div className={`transition-all duration-400 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-3 opacity-0'}`}>
+              <div className={`transition-all duration-400 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-3 opacity-0'}`} style={{ width: '70%' }}>
                 <h3
                   className="text-white font-black uppercase tracking-tight leading-tight"
                   style={{ fontSize: 'clamp(1rem, 2vw, 1.8rem)' }}
@@ -92,6 +66,12 @@ const Work = () => {
                   style={{ fontSize: 'clamp(0.55rem, 0.7vw, 0.7rem)', marginTop: '4px' }}
                 >
                   {project.category}
+                </p>
+                <p
+                  className="text-white/75 font-medium"
+                  style={{ fontSize: 'clamp(0.6rem, 0.9vw, 0.95rem)', marginTop: '6px', maxWidth: '100%' }}
+                >
+                  {project.description}
                 </p>
               </div>
             </div>
@@ -135,10 +115,10 @@ const Work = () => {
               className={`w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-[1.04] ${isActive ? 'scale-[1.04]' : 'scale-100'}`}
             />
             {/* Hover overlay */}
-            <div className={`absolute inset-0 transition-all duration-500 flex items-end lg:group-hover:bg-black/45 ${isActive ? 'bg-black/45' : 'bg-black/0'}`}
+            <div className={`absolute inset-0 transition-all duration-500 flex items-end ${isActive ? 'bg-black/45 backdrop-blur-sm' : 'bg-black/0'} lg:group-hover:bg-black/45 lg:group-hover:backdrop-blur-sm`}
               style={{ padding: 'clamp(12px, 2vw, 24px)' }}
             >
-              <div className={`transition-all duration-400 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-3 opacity-0'}`}>
+              <div className={`transition-all duration-400 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-3 opacity-0'}`} style={{ width: '70%' }}>
                 <h3
                   className="text-white font-black uppercase tracking-tight leading-tight"
                   style={{ fontSize: 'clamp(1rem, 2vw, 1.8rem)' }}
@@ -150,6 +130,12 @@ const Work = () => {
                   style={{ fontSize: 'clamp(0.55rem, 0.7vw, 0.7rem)', marginTop: '4px' }}
                 >
                   {project.category}
+                </p>
+                <p
+                  className="text-white/75 font-medium"
+                  style={{ fontSize: 'clamp(0.6rem, 0.9vw, 0.95rem)', marginTop: '6px', maxWidth: '100%' }}
+                >
+                  {project.description}
                 </p>
               </div>
             </div>

@@ -1,29 +1,29 @@
 const projects = [
   {
     id: 1,
-    title: 'Modern Aesthetic',
-    description: 'Minimalist interior design for a modern home.',
-    category: 'Design',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop',
-    link: '#',
+    title: 'Ambiguity Lens',
+    description: 'AmbiguityLens is a full-stack web application that audits robotics commands to identify ambiguous language and ensure commands are executable by robotic systems.',
+    category: 'Full Stack AI Application',
+    image: '/public/images/ambiguity-lens.png',
+    link: 'https://ambiguitylens-iota.vercel.app/',
   },
   {
     id: 2,
-    title: 'Violet Orbit',
-    description: '3D abstract art exploring cosmic motion.',
-    category: '3D Art',
-    image: 'https://images.unsplash.com/photo-1633167606207-d840b5070fc2?q=80&w=1000&auto=format&fit=crop',
-    link: '#',
+    title: 'Arxiv Digest',
+    description: 'A modern web application that uses AI to summarize research papers from arXiv with a clean, academic design',
+    category: 'Full Stack AI Application',
+    image: '/public/images/arxiv-digest.png',
+    link: 'https://arxiv-digest-seven.vercel.app/',
   },
   {
     id: 3,
-    title: 'Industrial Design',
-    description: 'Precision-engineered product concept.',
-    category: 'Product',
-    image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1000&auto=format&fit=crop',
-    link: '#',
+    title: 'Semantic Vault',
+    description: 'Semantic Vault is a minimalist note-taking application designed with an "industrial zenith" aesthetic and powered by semantic search (RAG). Unlike traditional keyword-based search, it understands the meaning of your notes using state-of-the-art vector embeddings.',
+    category: 'Full Stack AI Application',
+    image: '/public/images/semantic-vault.png',
+    link: 'https://semantic-vault.vercel.app/',
   },
-  {
+  /*{
     id: 4,
     title: 'Minimalist Poster',
     description: 'Graphic design exploring negative space.',
@@ -31,6 +31,7 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1586075010633-2470fd20786b?q=80&w=1000&auto=format&fit=crop',
     link: '#',
   },
+  */
 ]
 
 export default projects

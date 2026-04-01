@@ -4,6 +4,8 @@ import Hero from './components/Hero'
 import Work from './components/Work'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
+import Publications from './components/Publications'
+import Recommendations from './components/Recommendations'
 import About from './components/About'
 import Footer from './components/Footer'
 
@@ -17,6 +19,8 @@ function App() {
         <About />
         <Experience />
         <Skills />
+        <Publications />
+        <Recommendations />
         <Work />
       </div>
       {/* Footer breaks out of padding to be full-width */}

@@ -42,7 +42,8 @@ export const resumeData = {
         "Enhanced HTML-based email dashboards with structured layouts and visual indicators for improved clarity.",
         "Migrated automation test cases from Robot Framework to Pytest for better maintainability."
       ],
-      stack: ["Jenkins (Groovy)", "Python", "Shell", "Docker", "Kubernetes", "Kafka", "Elasticsearch", "Kibana", "Git", "Pytest"]
+      stack: ["Jenkins (Groovy)", "Python", "Shell", "Docker", "Kubernetes", "Kafka", "Elasticsearch", "Kibana", "Git", "Pytest"],
+      certificate:"https://drive.google.com/file/d/1IIvBKw9nWxNf8BKXoXR1vTuw5hgDBJFk/view?usp=drive_link"
     }
   ],
   skills: {
@@ -56,9 +57,96 @@ export const resumeData = {
     ai: ["Deep Learning","Gen AI"]
   },
   certifications: [
-    "Microsoft: MTA: Introduction to Programming using Python",
-    "Microsoft: Power BI Data Analyst",
-    "NVIDIA: Fundamentals of Deep Learning",
-    "Coincent.ai: Artificial Intelligence with Python",
+    {
+      title:"Microsoft: MTA: Introduction to Programming using Python",
+      link:"https://drive.google.com/file/d/11f3_Zovx7D6ducoNmuaTzRlahsfdI7tZ/view?usp=drive_link"
+    },
+    {
+      title:"Microsoft: Power BI Data Analyst",
+      link:"https://drive.google.com/file/d/1xRGMUGzWcovlOvy21XCopZTiIoNevwWM/view?usp=drive_link"
+    },
+    {
+      title:"NVIDIA: Fundamentals of Deep Learning",
+      link:"https://drive.google.com/file/d/1lbkh9SPe5qeHM3Rii8_-oIUt5zdBHgeh/view?usp=drive_link"
+    },
+    {
+      title:"Coincent.ai: Artificial Intelligence with Python",
+      link:"https://drive.google.com/file/d/1tHKFUmJUFg1Un0GGEkZ36Sbs-tfNbFEb/view?usp=drive_link"
+    },
+    {
+      title:"Accenture: Data Analytics and Visualization Job Simulation",
+      link:"https://drive.google.com/file/d/1YMmp_3OiNCMQ2Pk_kbFve9gh6WlnscW4/view?usp=drive_link"
+    },
+    {
+      title:"AWS Certified Solutions Architect Associate (SAA-C03) Cert Prep",
+      link:"https://drive.google.com/file/d/1nKZe2y2DHx7bjvn5GUhuBjL8oTEHeA0J/view?usp=drive_link"
+    },
+    {
+      title:"Python for Data Professionals in Finance",
+      link:"https://drive.google.com/file/d/1apAPp09wOj7xBhB3IG4Ein0n1OaZmgQK/view?usp=drive_link"
+    },
+    {
+      title:"CSI Student Chapter: LLM Workshop 2024",
+      link:"https://drive.google.com/file/d/1ueiNe91ou3Ihk0K25uBkkomNb_CClnZG/view?usp=drive_link"
+    },
+    {
+      title:"Team Quark: Envision 2023",
+      link:"https://drive.google.com/file/d/1sLP622x99lLSBxX2Xh1VZnKQONMN_pzu/view?usp=drive_link"
+    }
+    ],
+  publications: [
+    {
+      title: "Inclusive ASR Model for Dysarthria Speech",
+      journal: "Springer Nature Journal",
+      year: "2024",
+      link: "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://content.e-bookshelf.de/media/reading/L-25366593-7fa73eb4e8.pdf&ved=2ahUKEwi1xqCnr8yTAxVboq8BHclKFisQFnoECFwQAQ&usg=AOvVaw0oN1bgYHjNhoMff9eKYndc"
+    },
+    {
+      title: "Detection of B-ALL using CNN model and Deep Learning",
+      journal: "Springer Nature Journal",
+      year: "2023",
+      link: "https://link.springer.com/chapter/10.1007/978-981-97-8031-0_23"
+    },
+    {
+      title: "Diabetes Prediction using Logistic Regression",
+      journal: "Springer Nature Journal",
+      year: "2023",
+      link: "https://link.springer.com/chapter/10.1007/978-981-99-3608-3_52"
+    },
+    {
+      title: "Design and Development of IoT based Smart Jacket for Farmers",
+      journal: "Springer Nature Journal",
+      year: "2023",
+      link: "https://link.springer.com/chapter/10.1007/978-3-031-58607-1_4"
+    },
+    {
+      title: "Face Recognition based Attendance System using OpenCV",
+      journal: "International Conference on Future Road of Multidisciplinary Streams",
+      year: "2022",
+      link: "https://iferp-in-docs.s3.ap-south-1.amazonaws.com/conf-proceedings/2022/icfmrs-proceesing-book.pdf"
+    }
+  ],
+  co_curricular: [
+    "Advisor, Team Catalyst – Leading a team mentoring 1000+ FY students.",
+    "Multimedia Head, Team Endurance Racing – Managed media content and branding.",
+    "Media Aquisition and Creatives Secretary, Social Welfare & Development Committee – Led social initiatives and digital outreach."
+  ],
+  recommendations:[
+    {
+      name:"Vishwas Pathak",
+      role:"Manager",
+      company:"Parallel Wireless",
+      period:"Jul 2025 – Jan 2026",
+      highlights:" Yash worked with us as an Intern at Parallel Wireless, reporting directly to me. During his internship, he consistently delivered and successfully completed tasks related to Python automation, CI/CD pipelines, Jenkins, manual testing, and product development using Shell scripting and Python, maintaining a good standard of quality. He is a thoroughly dedicated and hardworking engineer with a strong ability to understand requirements quickly and convert them into working solutions. Yash has demonstrated exceptional capability in learning new technologies in a short time and applying them productively. His contributions have helped the team save time and improve debugging efficiency for product applications. One of Yash’s notable strengths is his confidence in asking the right questions to the right people at the right time whenever he encounters challenges. This is an excellent quality, especially for someone at an early stage of their professional career. Yash will be a valuable asset to any organization he joins. I strongly recommend him for QA or Developer roles aligned with his experience level.",
+      recommender_profile:"https://www.linkedin.com/in/vishwas-pathak-37350418"
+    },
+    {
+      name:"Nilesh Giri",
+      role:"Senior Technical Lead - R&D (My Mentor)",
+      company:"Parallel Wireless",
+      period:"Jul 2025 – Jan 2026",
+      highlights:"I had the pleasure of working with Yash for six months during his internship. Yash has successfully completed assignments in Shell scripting and Python, demonstrating strong problem-solving skills and attention to detail. He was also given the opportunity to work with CI tools like Jenkins, where he ramped up quickly and showed good understanding of the concepts and practical implementation. What truly stands out about Yash is his constructive attitude. He is very receptive to feedback and actively works on incorporating suggestions to improve his work. His enthusiasm, adaptability, and willingness to learn make him a dependable team member. I am confident that Yash will be a valuable asset to any organization.",
+      recommender_profile:"https://www.linkedin.com/in/nilesh-giri-a8901158"
+    }
   ]
 };

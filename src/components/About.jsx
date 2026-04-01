@@ -29,7 +29,7 @@ const About = () => {
           className="font-medium text-black/70 dark:text-white/70 leading-[1.65] text-left transition-colors duration-500"
           style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
         >
-          I collaborate with teams of all sizes worldwide, using the latest technologies to build intelligent AI systems. I'm dedicated to crafting solutions that are both highly functional and beautifully designed — seamlessly aligned with unique needs and long-term goals.
+          I collaborate with teams of all sizes, using the latest technologies to build intelligent systems. I'm dedicated to crafting solutions that are both highly functional and beautifully designed — seamlessly aligned with unique needs and long-term goals.
         </p>
         <p
           className="font-medium text-black/70 dark:text-white/70 leading-[1.65] text-left transition-colors duration-500"
@@ -113,7 +113,7 @@ const About = () => {
           className="font-medium text-black/70 dark:text-white/70 leading-[1.65] text-left transition-colors duration-500"
           style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
         >
-          I collaborate with teams of all sizes worldwide, using the latest technologies to build intelligent AI systems. I'm dedicated to crafting solutions that are both highly functional and beautifully designed — seamlessly aligned with unique needs and long-term goals.
+          I collaborate with teams of all sizes, using the latest technologies to build intelligent systems. I'm dedicated to crafting solutions that are both highly functional and beautifully designed — seamlessly aligned with unique needs and long-term goals.
         </p>
         <p
           className="font-medium text-black/70 dark:text-white/70 leading-[1.65] text-left transition-colors duration-500"
@@ -170,8 +170,38 @@ const About = () => {
           </motion.div>
         ))}
       </div>
-    
-      </div>
+
+      <motion.div
+        className="border-t border-black/10 dark:border-white/10 transition-colors duration-500"
+        style={{ marginTop: 'clamp(40px, 8vh, 80px)', paddingTop: 'clamp(16px, 2.5vh, 28px)' }}
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+      >
+        <p
+          className="font-semibold text-black dark:text-white transition-colors duration-500"
+          style={{ fontSize: 'clamp(1rem, 1.5vw, 1.8rem)', marginBottom: 'clamp(16px, 3vh, 28px)' }}
+        >
+          leadership.
+        </p>
+        <div className="flex flex-col" style={{ gap: 'clamp(8px, 1.2vh, 14px)' }}>
+          {resumeData.co_curricular.map((item, i) => (
+            <motion.p
+              key={i}
+              className="font-medium text-black/55 dark:text-white/50 transition-colors duration-500"
+              style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
+              initial={{ opacity: 0, y: 5 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.2 + (i * 0.05) }}
+            >
+              — {item}
+            </motion.p>
+          ))}
+        </div>
+      </motion.div>
+    </div>
   </section>
   )
 }

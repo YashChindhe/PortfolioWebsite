@@ -66,9 +66,10 @@ const Skills = () => {
       <motion.div
         className="border-t border-black/10 dark:border-white/10 transition-colors duration-500"
         style={{ marginTop: 'clamp(40px, 8vh, 80px)', paddingTop: 'clamp(16px, 2.5vh, 28px)' }}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
       >
         <p
           className="font-semibold text-black dark:text-white transition-colors duration-500"
@@ -76,15 +77,42 @@ const Skills = () => {
         >
           certifications.
         </p>
-        <div className="flex flex-col" style={{ gap: 'clamp(6px, 1vh, 10px)' }}>
+        <div className="flex flex-col" style={{ gap: 'clamp(2px, 0.4vh, 6px)' }}>
           {resumeData.certifications.map((cert, i) => (
-            <p
-              key={i}
-              className="font-medium text-black/55 dark:text-white/50 transition-colors duration-500"
-              style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
+            <motion.div 
+              key={i} 
+              className="flex items-center group"
+              initial={{ opacity: 0, y: 5 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.2 + (i * 0.03) }}
             >
-              — {cert}
-            </p>
+              {cert.link ? (
+                <a 
+                  href={cert.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 py-1 group/link"
+                >
+                  <p
+                    className="font-medium text-black/55 dark:text-white/50 group-hover/link:text-black dark:group-hover/link:text-white transition-colors duration-500"
+                    style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
+                  >
+                    — {cert.title}
+                  </p>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-black/30 dark:text-white/30 group-hover/link:text-black dark:group-hover/link:text-white rotate-45 transition-all duration-300">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
+              ) : (
+                <p
+                  className="font-medium text-black/55 dark:text-white/50 py-1"
+                  style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
+                >
+                  — {cert.title}
+                </p>
+              )}
+            </motion.div>
           ))}
         </div>
       </motion.div>
@@ -141,9 +169,10 @@ const Skills = () => {
       <motion.div
         className="border-t border-black/10 dark:border-white/10 transition-colors duration-500"
         style={{ marginTop: 'clamp(40px, 8vh, 80px)', paddingTop: 'clamp(16px, 2.5vh, 28px)' }}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
       >
         <p
           className="font-semibold text-black dark:text-white transition-colors duration-500"
@@ -151,15 +180,42 @@ const Skills = () => {
         >
           certifications.
         </p>
-        <div className="flex flex-col" style={{ gap: 'clamp(6px, 1vh, 10px)' }}>
+        <div className="flex flex-col" style={{ gap: 'clamp(2px, 0.4vh, 6px)' }}>
           {resumeData.certifications.map((cert, i) => (
-            <p
-              key={i}
-              className="font-medium text-black/55 dark:text-white/50 transition-colors duration-500"
-              style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
+            <motion.div 
+              key={i} 
+              className="flex items-center group"
+              initial={{ opacity: 0, y: 5 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.2 + (i * 0.03) }}
             >
-              — {cert}
-            </p>
+              {cert.link ? (
+                <a 
+                  href={cert.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 py-1 group/link"
+                >
+                  <p
+                    className="font-medium text-black/55 dark:text-white/50 group-hover/link:text-black dark:group-hover/link:text-white transition-colors duration-500"
+                    style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
+                  >
+                    — {cert.title}
+                  </p>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-black/30 dark:text-white/30 group-hover/link:text-black dark:group-hover/link:text-white rotate-45 transition-all duration-300">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
+              ) : (
+                <p
+                  className="font-medium text-black/55 dark:text-white/50 py-1"
+                  style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
+                >
+                  — {cert.title}
+                </p>
+              )}
+            </motion.div>
           ))}
         </div>
       </motion.div>

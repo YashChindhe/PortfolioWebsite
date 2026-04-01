@@ -95,14 +95,11 @@ const Skills = () => {
                   className="flex items-start gap-3 py-1 group/link"
                 >
                   <p
-                    className="font-medium text-black/55 dark:text-white/50 group-hover/link:text-black dark:group-hover/link:text-white transition-colors duration-500"
+                    className="font-medium text-black/55 dark:text-white/50 group-hover/link:text-black dark:group-hover/link:text-white transition-all duration-500"
                     style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
                   >
-                    — {cert.title}
+                    — <span className="underline decoration-black/30 dark:decoration-white/30 group-hover/link:decoration-black/40 dark:group-hover/link:decoration-white/40 underline-offset-[3px] transition-all duration-500">{cert.title}</span>
                   </p>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-black/30 dark:text-white/30 group-hover/link:text-black dark:group-hover/link:text-white rotate-45 transition-all duration-300 flex-shrink-0 translate-y-[6px]">
-                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
                 </a>
               ) : (
                 <p
@@ -198,14 +195,11 @@ const Skills = () => {
                   className="flex items-start gap-3 py-1 group/link"
                 >
                   <p
-                    className="font-medium text-black/55 dark:text-white/50 group-hover/link:text-black dark:group-hover/link:text-white transition-colors duration-500"
+                    className="font-medium text-black/55 dark:text-white/50 group-hover/link:text-black dark:group-hover/link:text-white transition-all duration-500"
                     style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
                   >
-                    — {cert.title}
+                    — <span className="underline decoration-black/30 dark:decoration-white/30 group-hover/link:decoration-black/40 dark:group-hover/link:decoration-white/40 underline-offset-[3px] transition-all duration-500">{cert.title}</span>
                   </p>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-black/30 dark:text-white/30 group-hover/link:text-black dark:group-hover/link:text-white rotate-45 transition-all duration-300 flex-shrink-0 translate-y-[6px]">
-                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
                 </a>
               ) : (
                 <p

@@ -81,6 +81,29 @@ const Experience = () => {
                   </span>
                 ))}
               </div>
+
+              {exp.certificate && (
+                <a
+                  href={exp.certificate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 group w-fit"
+                  style={{ marginTop: '8px' }}
+                >
+                  <span 
+                    className="font-bold uppercase tracking-[0.1em] text-black/40 dark:text-white/40 group-hover:text-black dark:group-hover:text-white transition-all duration-300"
+                    style={{ fontSize: 'clamp(0.65rem, 0.9vw, 0.9rem)' }}
+                  >
+                    View Certificate
+                  </span>
+                  <svg 
+                    width="12" height="12" viewBox="0 0 12 12" fill="none" 
+                    className="text-black/30 dark:text-white/30 group-hover:text-black dark:group-hover:text-white transition-all duration-300 rotate-45"
+                  >
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
@@ -164,6 +187,29 @@ const Experience = () => {
                   </span>
                 ))}
               </div>
+
+              {exp.certificate && (
+                <a
+                  href={exp.certificate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 group w-fit"
+                  style={{ marginTop: '12px' }}
+                >
+                  <span 
+                    className="font-bold uppercase tracking-[0.1em] text-black/40 dark:text-white/40 group-hover:text-black dark:group-hover:text-white transition-all duration-300"
+                    style={{ fontSize: 'clamp(0.65rem, 0.9vw, 0.9rem)' }}
+                  >
+                    View Certificate
+                  </span>
+                  <svg 
+                    width="14" height="14" viewBox="0 0 12 12" fill="none" 
+                    className="text-black/30 dark:text-white/30 group-hover:text-black dark:group-hover:text-white transition-all duration-300 rotate-45"
+                  >
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
+              )}
             </div>
           </motion.div>
         ))}

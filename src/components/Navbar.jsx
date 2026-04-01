@@ -6,6 +6,8 @@ const navLinks = [
   { label: 'about', href: '#about' },
   { label: 'experience', href: '#experience' },
   { label: 'skills', href: '#skills' },
+  { label: 'publications', href: '#publications' },
+  { label: 'recommendations', href: '#recommendations' },
   { label: 'work', href: '#work' },
   { label: 'contact', href: '#contact' },
 ]
@@ -114,7 +116,7 @@ const Navbar = () => {
                   href={link.href}
                   onClick={(e) => { e.preventDefault(); handleNav(link.href) }}
                   className="font-black uppercase text-black dark:text-white hover:opacity-40 transition-opacity"
-                  style={{ fontSize: 'clamp(2.5rem, 10vw, 5rem)', letterSpacing: '-0.03em' }}
+                  style={{ fontSize: 'clamp(1.8rem, 8vw, 4rem)', letterSpacing: '-0.03em', lineHeight: 1 }}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.07 }}

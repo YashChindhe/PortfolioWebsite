@@ -42,7 +42,7 @@ const Publications = () => {
                 <div className="flex flex-col gap-1">
                   <h3
                     className="font-black uppercase tracking-tight text-black dark:text-white transition-colors duration-500"
-                    style={{ fontSize: 'clamp(1.2rem, 2vw, 1.5rem)', lineHeight: 1.1 }}
+                    style={{ fontSize: 'clamp(0.95rem, 1.8vw, 1.5rem)', lineHeight: 1.15 }}
                   >
                     {pub.title}
                   </h3>

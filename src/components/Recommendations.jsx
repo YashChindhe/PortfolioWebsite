@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { ArrowUpRight } from 'lucide-react'
 import { resumeData } from '../data/resume'
 
 const Recommendations = () => {
@@ -37,16 +38,18 @@ const Recommendations = () => {
                     href={rec.recommender_profile} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="font-black uppercase tracking-tight text-black dark:text-white hover:opacity-70 transition-all duration-300 flex items-center gap-2 group w-fit"
+                    className="font-black uppercase tracking-tight text-black dark:text-white hover:opacity-70 transition-all duration-300 flex items-start gap-2 group w-fit"
                     style={{ fontSize: 'clamp(0.95rem, 1.2vw, 1.3rem)' }}
                   >
                     {rec.name}
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="opacity-0 group-hover:opacity-100 transition-all duration-300 rotate-45 transform translate-y-1">
-                      <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                    <ArrowUpRight 
+                      size={14} 
+                      strokeWidth={2.5} 
+                      className="opacity-40 group-hover:opacity-100 transition-all duration-300 transform translate-y-[1px]" 
+                    />
                   </a>
                   <p 
-                    className="font-medium text-black/50 dark:text-white/50"
+                    className="font-medium text-black/50 dark:text-white/50 transition-colors duration-500"
                     style={{ fontSize: 'clamp(0.75rem, 0.9vw, 1rem)', marginTop: '2px' }}
                   >
                     {rec.role} at {rec.company}
@@ -90,16 +93,21 @@ const Recommendations = () => {
                     href={rec.recommender_profile} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="font-black uppercase tracking-tight text-black dark:text-white hover:opacity-70 transition-all duration-300 flex items-center gap-2 group w-fit"
+                    className="font-black uppercase tracking-tight text-black dark:text-white hover:opacity-70 transition-all duration-300 flex items-start gap-2 group w-fit"
                     style={{ fontSize: 'clamp(0.95rem, 1.2vw, 1.3rem)' }}
                   >
                     {rec.name}
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="opacity-0 group-hover:opacity-100 transition-all duration-300 rotate-45 transform translate-y-1">
-                      <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                    <ArrowUpRight 
+                      strokeWidth={2.5} 
+                      className="opacity-40 group-hover:opacity-100 transition-all duration-300 transform translate-y-[1px]" 
+                      style={{ 
+                        width: 'clamp(0.75rem, 0.9vw, 1rem)', 
+                        height: 'clamp(0.75rem, 0.9vw, 1rem)' 
+                      }}
+                    />
                   </a>
                   <p 
-                    className="font-medium text-black/50 dark:text-white/50"
+                    className="font-medium text-black/50 dark:text-white/50 transition-colors duration-500"
                     style={{ fontSize: 'clamp(0.75rem, 0.9vw, 1rem)', marginTop: '2px' }}
                   >
                     {rec.role} at {rec.company}

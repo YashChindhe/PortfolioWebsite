@@ -3,13 +3,15 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Moon, Sun } from 'lucide-react'
 
 const navLinks = [
-  { label: 'about', href: '#about' },
+  { label: 'work', href: '#work' },
   { label: 'experience', href: '#experience' },
   { label: 'skills', href: '#skills' },
-  { label: 'publications', href: '#publications' },
+  { label: 'development', href: '#consistency' },
   { label: 'recommendations', href: '#recommendations' },
-  { label: 'work', href: '#work' },
-  { label: 'consistency', href: '#consistency' },
+  { label: 'education', href: '#education' },
+  { label: 'publications', href: '#publications' },
+  { label: 'leadership', href: '#leadership' },
+  { label: 'certificates', href: '#certificates' },
   { label: 'contact', href: '#contact' },
 ]
 
@@ -58,15 +60,15 @@ const Navbar = () => {
         <a
           href="#"
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
-          className="font-black text-black dark:text-white tracking-tight transition-colors duration-500"
-          style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.4rem)',  fontWeight: 700 }}
+          className="font-bold text-black dark:text-white tracking-tight transition-colors duration-500"
+          style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.4rem)' }}
         >
           Hello :)
         </a>
 
-        {/* Desktop nav links */}
-        <nav className="hidden md:flex items-center" style={{ gap: 'clamp(12px, 2.5vw, 32px)' }}>
-          {navLinks.map((link) => (
+        {/* Desktop nav links - Simplified for clarity */}
+        <nav className="hidden md:flex items-center" style={{ gap: 'clamp(16px, 3vw, 40px)' }}>
+          {navLinks.filter(link => ['work', 'experience', 'skills', 'development', 'recommendations', 'contact'].includes(link.label)).map((link) => (
             <a
               key={link.label}
               href={link.href}
@@ -111,7 +113,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             <nav className="flex flex-col gap-6">
-              {navLinks.map((link, i) => (
+              {navLinks.filter(link => ['work', 'experience', 'skills', 'development', 'recommendations', 'contact'].includes(link.label)).map((link, i) => (
                 <motion.a
                   key={link.label}
                   href={link.href}

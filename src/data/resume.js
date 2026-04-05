@@ -34,13 +34,13 @@ export const resumeData = {
       company: "Parallel Wireless",
       period: "Jul 2025 – Jan 2026",
       highlights: [
-        "Accelerated incident root-cause analysis by 91% by developing a Python-based automation workflow integrated with Jenkins, reducing log processing time from 60 minutes to 5 minutes.",
-        "Applied object-oriented design to structure log processing and reporting logic into reusable components.",
-        "Developed a scheduled cloud storage monitoring pipeline across multiple environments, reducing reactive storage escalations by ~25%.",
-        "Contributed to validation and testing of event-driven microservices deployed via Docker and Kubernetes (Kafka based message flow).",
-        "Authored and executed 20+ automated test cases, verifying REST API schema consistency and visualization correctness across microservice-to-Kibana data paths.",
-        "Enhanced HTML-based email dashboards with structured layouts and visual indicators for improved clarity.",
-        "Migrated automation test cases from Robot Framework to Pytest for better maintainability."
+        "Reduced incident root-cause analysis time by 91% using Python & Jenkins (60m to 5m).",
+        "Applied OOP principles to build reusable log processing and reporting components.",
+        "Automated cloud storage monitoring, reducing storage escalations by ~25%.",
+        "Validated event-driven microservices (Kafka) within Docker & Kubernetes environments.",
+        "Authored 20+ E2E test cases for REST API schema and Kibana visualization consistency.",
+        "Enhanced email dashboards with structured layouts and visual status indicators.",
+        "Migrated automation suites from Robot Framework to Pytest for improved maintainability."
       ],
       stack: ["Jenkins (Groovy)", "Python", "Shell", "Docker", "Kubernetes", "Kafka", "Elasticsearch", "Kibana", "Git", "Pytest"],
       certificate:"https://drive.google.com/file/d/1IIvBKw9nWxNf8BKXoXR1vTuw5hgDBJFk/view?usp=drive_link"

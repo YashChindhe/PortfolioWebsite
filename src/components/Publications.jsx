@@ -32,7 +32,7 @@ const Publications = () => {
               <div>
                 <p
                   className="font-medium text-black/40 dark:text-white/40 tracking-[0.1em] transition-colors duration-500 uppercase"
-                  style={{ fontSize: 'clamp(0.6rem, 1vw, 1rem)' }}
+                  style={{ fontSize: 'clamp(0.65rem, 0.95vw, 0.95rem)' }}
                 >
                   {pub.year}
                 </p>
@@ -41,14 +41,14 @@ const Publications = () => {
               <div className="flex flex-col gap-4">
                 <div className="flex flex-col gap-1">
                   <h3
-                    className="font-black uppercase tracking-tight text-black dark:text-white transition-colors duration-500"
-                    style={{ fontSize: 'clamp(0.95rem, 1.8vw, 1.5rem)', lineHeight: 1.15 }}
+                    className="font-bold uppercase tracking-tight text-black dark:text-white transition-colors duration-500"
+                    style={{ fontSize: 'clamp(1rem, 1.6vw, 1.6rem)', lineHeight: 1.15 }}
                   >
                     {pub.title}
                   </h3>
                   <p
                     className="font-medium text-black/50 dark:text-white/50 transition-colors duration-500"
-                    style={{ fontSize: 'clamp(0.78rem, 1vw, 1.2rem)', marginTop: '4px' }}
+                    style={{ fontSize: 'clamp(0.85rem, 1.05vw, 1.1rem)', marginTop: '4px' }}
                   >
                     {pub.journal}
                   </p>
@@ -109,7 +109,7 @@ const Publications = () => {
               <div>
                 <p
                   className="font-semibold text-black/40 dark:text-white/40 tracking-[0.1em] transition-colors duration-500 uppercase"
-                  style={{ fontSize: 'clamp(0.6rem, 1vw, 1rem)' }}
+                  style={{ fontSize: 'clamp(0.65rem, 0.95vw, 0.95rem)' }}
                 >
                   {pub.year}
                 </p>
@@ -118,8 +118,8 @@ const Publications = () => {
               <div className="flex flex-col gap-4">
                 <div className="flex flex-col gap-1">
                   <h3
-                    className="font-black uppercase tracking-tight text-black dark:text-white transition-colors duration-500"
-                    style={{ fontSize: 'clamp(0.95rem, 1.8vw, 1.5rem)', lineHeight: 1.1 }}
+                    className="font-bold uppercase tracking-tight text-black dark:text-white transition-colors duration-500"
+                    style={{ fontSize: 'clamp(1rem, 1.6vw, 1.6rem)', lineHeight: 1.15 }}
                   >
                     {pub.title}
                   </h3>

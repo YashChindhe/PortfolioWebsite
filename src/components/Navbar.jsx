@@ -9,6 +9,7 @@ const navLinks = [
   { label: 'publications', href: '#publications' },
   { label: 'recommendations', href: '#recommendations' },
   { label: 'work', href: '#work' },
+  { label: 'consistency', href: '#consistency' },
   { label: 'contact', href: '#contact' },
 ]
 
@@ -47,8 +48,8 @@ const Navbar = () => {
   return (
     <>
       <motion.header
-        className="flex items-center justify-between sticky top-0 bg-white dark:bg-black z-50 transition-colors duration-500"
-        style={{ padding: 'clamp(12px, 5vh, 30px) 0' }}
+        className="flex items-center justify-between sticky top-0 bg-white/80 dark:bg-black/80 backdrop-blur-md z-50 transition-colors duration-500"
+        style={{ padding: 'clamp(8px, 2vh, 16px) 0' }}
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -58,20 +59,20 @@ const Navbar = () => {
           href="#"
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
           className="font-black text-black dark:text-white tracking-tight transition-colors duration-500"
-          style={{ fontSize: 'clamp(1rem, 1.8vw, 1.8em)',  fontWeight: 600 }}
+          style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.4rem)',  fontWeight: 700 }}
         >
           Hello :)
         </a>
 
         {/* Desktop nav links */}
-        <nav className="hidden md:flex items-center" style={{ gap: 'clamp(20px, 3vw, 48px)' }}>
+        <nav className="hidden md:flex items-center" style={{ gap: 'clamp(12px, 2.5vw, 32px)' }}>
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={(e) => { e.preventDefault(); handleNav(link.href) }}
-              className="font-semibold text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-colors duration-300 tracking-widest"
-              style={{ fontSize: 'clamp(1rem, 1.2vw, 1.2rem)' }}
+              className="font-bold uppercase text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-300 tracking-[0.2em]"
+              style={{ fontSize: 'clamp(0.6rem, 0.8vw, 0.75rem)' }}
             >
               {link.label}
             </a>
@@ -85,7 +86,7 @@ const Navbar = () => {
             className="text-black dark:text-white hover:opacity-50 transition-opacity"
             aria-label="Toggle theme"
           >
-            {isDark ? <Sun size={20} /> : <Moon size={20} />}
+            {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
 
           {/* Mobile hamburger */}

@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Work from './components/Work'
+import About from './components/About'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Publications from './components/Publications'
 import Recommendations from './components/Recommendations'
-import About from './components/About'
+import Work from './components/Work'
+import ConsistencyDashboard from './components/ConsistencyDashboard'
 import Footer from './components/Footer'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Publications />
         <Recommendations />
         <Work />
+        <ConsistencyDashboard />
       </div>
       {/* Footer breaks out of padding to be full-width */}
       <Footer />

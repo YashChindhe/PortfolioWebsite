@@ -27,7 +27,7 @@ const Recommendations = () => {
             >
               <p 
                 className="text-black/70 dark:text-white/70 italic leading-relaxed mb-6"
-                style={{ fontSize: 'clamp(0.9rem, 1.1vw, 1.25rem)' }}
+                style={{ fontSize: 'clamp(0.85rem, 1.05vw, 1.15rem)' }}
               >
                 "{rec.highlights}"
               </p>
@@ -38,7 +38,7 @@ const Recommendations = () => {
                     href={rec.recommender_profile} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="font-black uppercase tracking-tight text-black dark:text-white hover:opacity-70 transition-all duration-300 flex items-start gap-2 group w-fit"
+                    className="font-bold uppercase tracking-tight text-black dark:text-white hover:opacity-70 transition-all duration-300 flex items-start gap-2 group w-fit"
                     style={{ fontSize: 'clamp(0.95rem, 1.2vw, 1.3rem)' }}
                   >
                     {rec.name}
@@ -50,7 +50,7 @@ const Recommendations = () => {
                   </a>
                   <p 
                     className="font-medium text-black/50 dark:text-white/50 transition-colors duration-500"
-                    style={{ fontSize: 'clamp(0.75rem, 0.9vw, 1rem)', marginTop: '2px' }}
+                    style={{ fontSize: 'clamp(0.65rem, 0.95vw, 0.95rem)', marginTop: '2px' }}
                   >
                     {rec.role} at {rec.company}
                   </p>
@@ -82,7 +82,7 @@ const Recommendations = () => {
             >
               <p 
                 className="text-black/70 dark:text-white/70 italic leading-relaxed mb-8 flex-grow"
-                style={{ fontSize: 'clamp(0.9rem, 1.1vw, 1.25rem)' }}
+                style={{ fontSize: 'clamp(0.85rem, 1.05vw, 1.15rem)' }}
               >
                 "{rec.highlights}"
               </p>
@@ -93,7 +93,7 @@ const Recommendations = () => {
                     href={rec.recommender_profile} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="font-black uppercase tracking-tight text-black dark:text-white hover:opacity-70 transition-all duration-300 flex items-start gap-2 group w-fit"
+                    className="font-bold uppercase tracking-tight text-black dark:text-white hover:opacity-70 transition-all duration-300 flex items-start gap-2 group w-fit"
                     style={{ fontSize: 'clamp(0.95rem, 1.2vw, 1.3rem)' }}
                   >
                     {rec.name}
@@ -108,7 +108,7 @@ const Recommendations = () => {
                   </a>
                   <p 
                     className="font-medium text-black/50 dark:text-white/50 transition-colors duration-500"
-                    style={{ fontSize: 'clamp(0.75rem, 0.9vw, 1rem)', marginTop: '2px' }}
+                    style={{ fontSize: 'clamp(0.65rem, 0.95vw, 0.95rem)', marginTop: '2px' }}
                   >
                     {rec.role} at {rec.company}
                   </p>

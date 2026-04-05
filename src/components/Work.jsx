@@ -16,135 +16,93 @@ const Work = () => {
   }
 
   return (
-    <section id="work" style={{ marginTop: 'clamp(80px, 15vh, 200px)', marginBottom: 'clamp(80px, 15vh, 200px)' }}>
-      {/* ── MOBILE LAYOUT ── */}
-      <div className="md:hidden w-full">
-
-      {/* Header: 'work.' left, 'Show More' right */}
+    <section id="work" className="min-h-fit lg:h-screen flex flex-col overflow-hidden" style={{ paddingTop: 'clamp(40px, 6vh, 80px)', paddingBottom: 'clamp(40px, 6vh, 80px)' }}>
+      {/* Header: 'work.' at the very top */}
       <div
-        className="flex items-center justify-between border-t border-black/10 dark:border-white/10 transition-colors duration-500"
-        style={{ paddingTop: 'clamp(16px, 2.5vh, 28px)', marginBottom: 'clamp(28px, 5vh, 60px)' }}
+        className="border-t border-black/10 dark:border-white/10 transition-colors duration-500"
+        style={{ paddingTop: 'clamp(16px, 2.5vh, 28px)' }}
       >
         <span className="dark:text-white transition-colors duration-500" style={{ fontSize: 'clamp(1rem, 1.5vw, 1.8rem)', fontWeight: 600 }}>work.</span>
       </div>
 
-      <div
-        className="work-grid"
-        style={{ gap: 'clamp(6px, 0.8vw, 12px)' }}
-      >
-        {projects.map((project, i) => {
-          const isActive = activeCard === i
-          return (
-          <motion.a
-            key={i}
-            href={project.link}
-            onClick={(e) => handleCardClick(e, i)}
-            className="work-card group block relative overflow-hidden bg-black/5 dark:bg-white/5 w-full h-full transition-colors duration-500"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: i * 0.06 }}
-          >
-            <img
-              src={project.image}
-              alt={project.title}
-              className={`w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-[1.04] ${isActive ? 'scale-[1.04]' : 'scale-100'}`}
-            />
-            {/* Hover overlay */}
-            <div className={`absolute inset-0 transition-all duration-500 flex items-end ${isActive ? 'bg-black/45 backdrop-blur-sm' : 'bg-black/0'} lg:group-hover:bg-black/45 lg:group-hover:backdrop-blur-sm`}
-              style={{ padding: 'clamp(12px, 2vw, 24px)' }}
+      {/* Grid Container centered in the remaining height */}
+      <div className="flex-1 flex flex-col justify-center items-center py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 max-w-[1400px] w-full">
+          {projects.map((project, i) => (
+            <motion.div
+              key={i}
+              className="flex flex-col bg-white dark:bg-[#080808] border border-black/[0.08] dark:border-white/[0.08] rounded-xl overflow-hidden transition-all duration-500 hover:border-black/20 dark:hover:border-white/20 w-full"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
             >
-              <div className={`transition-all duration-400 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-3 opacity-0'}`} style={{ width: '70%' }}>
-                <h3
-                  className="text-white font-black uppercase tracking-tight leading-tight"
-                  style={{ fontSize: 'clamp(1rem, 2vw, 1.8rem)' }}
-                >
-                  {project.title}
-                </h3>
-                <p
-                  className="text-white/55 font-semibold uppercase tracking-widest"
-                  style={{ fontSize: 'clamp(0.55rem, 0.7vw, 0.7rem)', marginTop: '4px' }}
-                >
+              {/* Image Container */}
+              <div className="aspect-[1.8/1] w-full overflow-hidden bg-black/[0.02] dark:bg-white/[0.02] p-1.5">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+
+              {/* Content Area */}
+              <div className="p-6 md:p-8 flex flex-col flex-1">
+                <p className="text-black/40 dark:text-white/40 font-semibold uppercase tracking-[0.2em] text-[9px] md:text-[10px] mb-2 leading-none">
                   {project.category}
                 </p>
-                <p
-                  className="text-white/75 font-medium"
-                  style={{ fontSize: 'clamp(0.6rem, 0.9vw, 0.95rem)', marginTop: '6px', maxWidth: '100%' }}
-                >
-                  {project.description}
-                </p>
-              </div>
-            </div>
-          </motion.a>
-        )})}
-      </div>
-    
-      </div>
-
-      {/* ── DESKTOP LAYOUT ── */}
-      <div className="hidden md:block w-full">
-
-      {/* Header: 'work.' left, 'Show More' right */}
-      <div
-        className="flex items-center justify-between border-t border-black/10 dark:border-white/10 transition-colors duration-500"
-        style={{ paddingTop: 'clamp(16px, 2.5vh, 28px)', marginBottom: 'clamp(28px, 5vh, 60px)' }}
-      >
-        <span className="dark:text-white transition-colors duration-500" style={{ fontSize: 'clamp(1rem, 1.5vw, 1.8rem)', fontWeight: 600 }}>work.</span>
-      </div>
-
-      <div
-        className="work-grid"
-        style={{ gap: 'clamp(6px, 0.8vw, 12px)' }}
-      >
-        {projects.map((project, i) => {
-          const isActive = activeCard === i
-          return (
-          <motion.a
-            key={i}
-            href={project.link}
-            onClick={(e) => handleCardClick(e, i)}
-            className="work-card group block relative overflow-hidden bg-black/5 dark:bg-white/5 w-full h-full transition-colors duration-500"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: i * 0.06 }}
-          >
-            <img
-              src={project.image}
-              alt={project.title}
-              className={`w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-[1.04] ${isActive ? 'scale-[1.04]' : 'scale-100'}`}
-            />
-            {/* Hover overlay */}
-            <div className={`absolute inset-0 transition-all duration-500 flex items-end ${isActive ? 'bg-black/45 backdrop-blur-sm' : 'bg-black/0'} lg:group-hover:bg-black/45 lg:group-hover:backdrop-blur-sm`}
-              style={{ padding: 'clamp(12px, 2vw, 24px)' }}
-            >
-              <div className={`transition-all duration-400 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-3 opacity-0'}`} style={{ width: '70%' }}>
-                <h3
-                  className="text-white font-black uppercase tracking-tight leading-tight"
-                  style={{ fontSize: 'clamp(1rem, 2vw, 1.8rem)' }}
-                >
+                <h3 className="font-bold text-black dark:text-white uppercase mb-4 tracking-tight" style={{ fontSize: 'clamp(1rem, 1.6vw, 1.6rem)' }}>
                   {project.title}
                 </h3>
-                <p
-                  className="text-white/55 font-semibold uppercase tracking-widest"
-                  style={{ fontSize: 'clamp(0.55rem, 0.7vw, 0.7rem)', marginTop: '4px' }}
-                >
-                  {project.category}
-                </p>
-                <p
-                  className="text-white/75 font-medium"
-                  style={{ fontSize: 'clamp(0.6rem, 0.9vw, 0.95rem)', marginTop: '6px', maxWidth: '100%' }}
-                >
+                
+                <p className="text-black/50 dark:text-white/40 font-medium leading-[1.5] mb-8" style={{ fontSize: 'clamp(0.85rem, 1.05vw, 1.1rem)' }}>
                   {project.description}
                 </p>
+
+                {/* Tech Stack Pills */}
+                <div className="flex flex-wrap gap-2 mb-8 mt-auto">
+                  {project.stack && project.stack.map((tech, j) => (
+                    <span 
+                      key={j}
+                      className="bg-black/[0.04] dark:bg-white/[0.06] text-black/60 dark:text-white/60 px-2.5 py-1 rounded-md font-semibold border border-black/[0.01] dark:border-white/[0.01]"
+                      style={{ fontSize: 'clamp(0.65rem, 0.9vw, 0.9rem)' }}
+                    >
+                      {tech.toLowerCase()}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Action Buttons */}
+                <div className="grid grid-cols-2 gap-3 mt-auto">
+                  <a 
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 bg-[#121212] dark:bg-white text-white dark:text-black py-2.5 rounded-lg font-bold text-[11px] md:text-[12px] hover:opacity-90 transition-opacity"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    Website
+                  </a>
+                  <a 
+                    href={project.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 bg-[#121212] dark:bg-white text-white dark:text-black py-2.5 rounded-lg font-bold text-[11px] md:text-[12px] hover:opacity-90 transition-opacity"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                    Source
+                  </a>
+                </div>
               </div>
-            </div>
-          </motion.a>
-        )})}
+            </motion.div>
+          ))}
+        </div>
       </div>
-    
-      </div>
-  </section>
+    </section>
   )
 }
 

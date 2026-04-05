@@ -6,7 +6,7 @@ import { resumeData } from '../data/resume'
 const Hero = () => {
   return (
     <section
-      className="hero-section relative flex flex-col"
+      className="hero-section relative flex flex-col pt-8 md:pt-12"
     >
 
       {/* ── MOBILE layout: stacked ── */}
@@ -19,7 +19,7 @@ const Hero = () => {
             fontSize: 'clamp(3.5rem, 5vw, 80px)',
             lineHeight: 0.88,
             letterSpacing: '-0.05em',
-            marginTop: 'clamp(80px, 18vh, 100px)',
+            marginTop: 'clamp(120px, 24vh, 150px)',
           }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ const Hero = () => {
             fontSize: 'clamp(0.78rem, 3.5vw, 0.9rem)',
             lineHeight: 1.6,
             marginTop: 'clamp(30px, 5vh, 40px)',
-            paddingBottom: 'clamp(24px, 4vh, 40px)',
+            paddingBottom: 'clamp(110px, 22vh, 140px)',
           }}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,11 +59,10 @@ const Hero = () => {
       </div>
 
       {/* ── DESKTOP layout ── */}
-      {/* PC: Container is hidden on mobile, block level as flex on sm+ screens, expanding to fill available space */}
-      <div className="hidden sm:flex sm:flex-col sm:flex-1">
+      {/* PC: Vertically centered in the viewport */}
+      <div className="hidden sm:flex sm:flex-col sm:min-h-[85vh] justify-center">
         {/* Name — massive, flush-left */}
         <motion.div
-          style={{ marginTop: 'clamp(24px, 5vh, 60px)' }}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -71,7 +70,6 @@ const Hero = () => {
           <h1
             className="font-black text-black dark:text-white uppercase transition-colors duration-500"
             style={{
-              marginTop: 'clamp(24px, 5vh, 60px)',
               fontSize: 'clamp(4rem, 10vw, 240px)',
               lineHeight: 0.88,
               letterSpacing: '-0.05em',
@@ -80,15 +78,12 @@ const Hero = () => {
             YASH<br />CHINDHE
           </h1>
         </motion.div>
-
-        {/* Flex spacer */}
-        <div className="flex-1" />
-
+        
         {/* Bottom row: email left | intro right */}
-        {/* PC layout uses flex items-end justify-between to push content to opposite bottom corners */}
+        {/* Adjusted padding to sit nicely below the centered name */}
         <div
           className="flex items-end justify-between"
-          style={{ paddingBottom: 'clamp(24px, 4vh, 48px)', marginBottom: 'clamp(24px, 18vh, 300px)' }}
+          style={{ paddingTop: 'clamp(40px, 12vh, 180px)', paddingBottom: '20px' }}
         >
           <motion.div
             initial={{ opacity: 0, y: 16 }}

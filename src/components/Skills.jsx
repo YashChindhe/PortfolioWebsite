@@ -63,57 +63,6 @@ const Skills = () => {
         ))}
       </div>
 
-      <motion.div
-        className="border-t border-black/10 dark:border-white/10 transition-colors duration-500"
-        style={{ marginTop: 'clamp(40px, 8vh, 80px)', paddingTop: 'clamp(16px, 2.5vh, 28px)' }}
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        <p
-          className="font-semibold text-black dark:text-white transition-colors duration-500"
-          style={{ fontSize: 'clamp(1rem, 1.5vw, 1.8rem)', marginBottom: 'clamp(16px, 3vh, 28px)' }}
-        >
-          certifications.
-        </p>
-        <div className="flex flex-col" style={{ gap: 'clamp(2px, 0.4vh, 6px)' }}>
-          {resumeData.certifications.map((cert, i) => (
-            <motion.div 
-              key={i} 
-              className="flex items-center group"
-              initial={{ opacity: 0, y: 5 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 + (i * 0.03) }}
-            >
-              {cert.link ? (
-                <a 
-                  href={cert.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 py-1 group/link"
-                >
-                  <p
-                    className="font-medium text-black/55 dark:text-white/50 group-hover/link:text-black dark:group-hover/link:text-white transition-all duration-500"
-                    style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
-                  >
-                    — <span className="underline decoration-black/30 dark:decoration-white/30 group-hover/link:decoration-black/40 dark:group-hover/link:decoration-white/40 underline-offset-[3px] transition-all duration-500">{cert.title}</span>
-                  </p>
-                </a>
-              ) : (
-                <p
-                  className="font-medium text-black/55 dark:text-white/50 py-1"
-                  style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
-                >
-                  — {cert.title}
-                </p>
-              )}
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-    
       </div>
 
       {/* ── DESKTOP LAYOUT ── */}
@@ -163,57 +112,6 @@ const Skills = () => {
         ))}
       </div>
 
-      <motion.div
-        className="border-t border-black/10 dark:border-white/10 transition-colors duration-500"
-        style={{ marginTop: 'clamp(40px, 8vh, 80px)', paddingTop: 'clamp(16px, 2.5vh, 28px)' }}
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        <p
-          className="font-semibold text-black dark:text-white transition-colors duration-500"
-          style={{ fontSize: 'clamp(1rem, 1.5vw, 1.8rem)', marginBottom: 'clamp(16px, 3vh, 28px)' }}
-        >
-          certifications.
-        </p>
-        <div className="flex flex-col" style={{ gap: 'clamp(2px, 0.4vh, 6px)' }}>
-          {resumeData.certifications.map((cert, i) => (
-            <motion.div 
-              key={i} 
-              className="flex items-center group"
-              initial={{ opacity: 0, y: 5 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 + (i * 0.03) }}
-            >
-              {cert.link ? (
-                <a 
-                  href={cert.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 py-1 group/link"
-                >
-                  <p
-                    className="font-medium text-black/55 dark:text-white/50 group-hover/link:text-black dark:group-hover/link:text-white transition-all duration-500"
-                    style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
-                  >
-                    — <span className="underline decoration-black/30 dark:decoration-white/30 group-hover/link:decoration-black/40 dark:group-hover/link:decoration-white/40 underline-offset-[3px] transition-all duration-500">{cert.title}</span>
-                  </p>
-                </a>
-              ) : (
-                <p
-                  className="font-medium text-black/55 dark:text-white/50 py-1"
-                  style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
-                >
-                  — {cert.title}
-                </p>
-              )}
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-    
       </div>
   </section>
   )

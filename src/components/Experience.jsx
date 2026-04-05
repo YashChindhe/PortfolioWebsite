@@ -36,7 +36,7 @@ const Experience = () => {
             <div>
               <p
                 className="font-semibold text-black/40 dark:text-white/40 uppercase tracking-[0.15em] transition-colors duration-500"
-                style={{ fontSize: 'clamp(0.6rem, 1vw, 1rem)', paddingTop: '2px' }}
+                style={{ fontSize: 'clamp(0.65rem, 0.95vw, 0.95rem)', paddingTop: '2px' }}
               >
                 {exp.period}
               </p>
@@ -45,25 +45,25 @@ const Experience = () => {
             <div className="flex flex-col" style={{ gap: 'clamp(12px, 2vh, 24px)' }}>
               <div>
                 <h3
-                  className="font-black uppercase tracking-tight text-black dark:text-white transition-colors duration-500"
-                  style={{ fontSize: 'clamp(0.95rem, 1.8vw, 1.5rem)', lineHeight: 1.15 }}
+                  className="font-bold uppercase tracking-tight text-black dark:text-white transition-colors duration-500"
+                  style={{ fontSize: 'clamp(1rem, 1.6vw, 1.6rem)', lineHeight: 1.15 }}
                 >
                   {exp.role}
                 </h3>
                 <p
                   className="font-medium text-black/50 dark:text-white/50 transition-colors duration-500"
-                  style={{ fontSize: 'clamp(0.78rem, 1vw, 1.2rem)', marginTop: '4px' }}
+                  style={{ fontSize: 'clamp(0.85rem, 1.05vw, 1.1rem)', marginTop: '4px' }}
                 >
                   {exp.company}
                 </p>
               </div>
 
-              <ul className="flex flex-col" style={{ gap: 'clamp(6px, 1vh, 10px)', maxWidth: '680px' }}>
+              <ul className="flex flex-col" style={{ gap: 'clamp(6px, 1vh, 10px)' }}>
                 {exp.highlights.map((h, j) => (
                   <li
                     key={j}
                     className="text-black/55 dark:text-white/50 font-normal leading-relaxed transition-colors duration-500"
-                    style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.2rem)' }}
+                    style={{ fontSize: 'clamp(0.85rem, 1.05vw, 1.1rem)' }}
                   >
                     — {h}
                   </li>
@@ -74,8 +74,8 @@ const Experience = () => {
                 {exp.stack.map((tech, j) => (
                   <span
                     key={j}
-                    className="font-bold uppercase tracking-[0.15em] text-black/80 dark:text-white/80 border border-black/10 dark:border-white/10 transition-colors duration-500"
-                    style={{ fontSize: 'clamp(0.6rem, 0.8vw, 0.8rem)', padding: '3px clamp(6px, 0.8vw, 10px)' }}
+                    className="font-semibold uppercase tracking-[0.12em] text-black/80 dark:text-white/80 border border-black/10 dark:border-white/10 transition-colors duration-500"
+                    style={{ fontSize: 'clamp(0.55rem, 0.75vw, 0.8rem)', padding: '3px clamp(6px, 0.8vw, 10px)' }}
                   >
                     {tech}
                   </span>
@@ -151,8 +151,8 @@ const Experience = () => {
             <div className="flex flex-col" style={{ gap: 'clamp(12px, 2vh, 24px)' }}>
               <div>
                 <h3
-                  className="font-black uppercase tracking-tight text-black dark:text-white transition-colors duration-500"
-                  style={{ fontSize: 'clamp(0.95rem, 1.8vw, 1.5rem)', lineHeight: 1.1 }}
+                  className="font-bold uppercase tracking-tight text-black dark:text-white transition-colors duration-500"
+                  style={{ fontSize: 'clamp(1rem, 1.6vw, 1.6rem)', lineHeight: 1.15 }}
                 >
                   {exp.role}
                 </h3>
@@ -164,7 +164,7 @@ const Experience = () => {
                 </p>
               </div>
 
-              <ul className="flex flex-col" style={{ gap: 'clamp(6px, 1vh, 10px)', maxWidth: '680px' }}>
+              <ul className="flex flex-col" style={{ gap: 'clamp(6px, 1vh, 10px)' }}>
                 {exp.highlights.map((h, j) => (
                   <li
                     key={j}

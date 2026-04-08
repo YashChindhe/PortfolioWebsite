@@ -7,7 +7,7 @@ const projects = [
     image: '/images/ambiguity-lens.png',
     link: 'https://ambiguitylens-iota.vercel.app/',
     source: 'https://github.com/YashChindhe/AmbiguityLens',
-    stack: ['React', 'Node.js', 'Express', 'OpenAI API', 'Tailwind', 'PostgreSQL']
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'Neon PostgreSQL', 'Google Gemini', 'OpenRouter']
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const projects = [
     image: '/images/arxiv-digest.png',
     link: 'https://arxiv-digest-seven.vercel.app/',
     source: 'https://github.com/YashChindhe/ArxivDigest',
-    stack: ['Next.js', 'Python', 'FastAPI', 'Gemini AI', 'Vector DB', 'Vercel']
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Neon PostgreSQL', 'Google Gemini', 'KaTeX', 'PDF.js']
   },
   {
     id: 3,
@@ -27,17 +27,8 @@ const projects = [
     image: '/images/semantic-vault.png',
     link: 'https://semantic-vault.vercel.app/',
     source: 'https://github.com/YashChindhe/SemanticVault',
-    stack: ['React', 'BGE-M3 Embeddings', 'PostgreSQL', 'LTree', 'RAG', 'Docker']
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'pgvector', 'Hugging Face API', 'Framer Motion']
   },
-  /*{
-    id: 4,
-    title: 'Minimalist Poster',
-    description: 'Graphic design exploring negative space.',
-    category: 'Graphic',
-    image: 'https://images.unsplash.com/photo-1586075010633-2470fd20786b?q=80&w=1000&auto=format&fit=crop',
-    link: '#',
-  },
-  */
 ]
 
 export default projects

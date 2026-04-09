@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 const ConsistencyDashboard = () => {
-  const [githubStats, setGithubStats] = useState({ contributions: 0, daysActive: 0 })
-  const [leetcodeStats, setLeetcodeStats] = useState({ solved: 0, daysActive: 0 })
+  const [githubStats, setGithubStats] = useState({ contributions: 0, yearsActive: 0 })
+  const [leetcodeStats, setLeetcodeStats] = useState({ solved: 0, yearsActive: 1 })
   const [loading, setLoading] = useState(true)
 
   const githubUsername = 'YashChindhe'
@@ -43,27 +43,31 @@ const ConsistencyDashboard = () => {
           setLeetcodeStats(prev => ({
             ...prev,
             solved: leetData.totalSolved || leetData.solvedProblem || prev.solved,
-            daysActive: daysActive || prev.daysActive 
+            yearsActive: 1 // Completed years (2025)
           }))
         }
 
         // Fetch GitHub stats - Using a more reliable Vercel proxy
-        const ghResponse = await fetch(`https://github-contributions-api.jogruber.de/v4/${githubUsername}`)
+        const ghResponse = await fetch(`https://github-contributions-api.jogruber.de/v4/${githubUsername}?y=all`)
         if (ghResponse.ok) {
           const ghData = await ghResponse.json()
           console.log('GitHub Data Received:', ghData);
           
           if (ghData && ghData.total) {
-            const totalContributions = Object.values(ghData.total)
-               .filter(v => typeof v === 'number')
-               .reduce((sum, val) => sum + val, 0)
+            const totalContributions = Object.entries(ghData.total || {})
+               .filter(([year, val]) => parseInt(year) >= 2025 && typeof val === 'number')
+               .reduce((sum, [_, val]) => sum + val, 0)
             
-            const daysActiveValue = (ghData.contributions || [])
-               .filter(day => day.count > 0).length 
+            const activeYears = Object.entries(ghData.total || {})
+               .filter(([year, count]) => parseInt(year) >= 2025 && count > 0)
+               .map(([year]) => year)
+            
+            const totalYears = activeYears.length 
+            const yearsActiveValue = totalYears > 1 ? totalYears - 1 : 1 
 
             setGithubStats(prev => ({
               contributions: totalContributions || prev.contributions,
-              daysActive: daysActiveValue || prev.daysActive
+              yearsActive: yearsActiveValue || prev.yearsActive
             }))
           }
         }
@@ -119,7 +123,7 @@ const ConsistencyDashboard = () => {
           </div>
           <div className="mt-8 pt-6 border-t border-black/5 dark:border-white/5">
             <p className="text-black/30 dark:text-white/30 text-sm font-bold uppercase tracking-widest">
-              Days Active : <span className="text-black dark:text-white">{githubStats.daysActive}+</span>
+              Years Active : <span className="text-black dark:text-white">{githubStats.yearsActive}+</span>
             </p>
           </div>
         </motion.a>
@@ -149,7 +153,7 @@ const ConsistencyDashboard = () => {
           </div>
           <div className="mt-8 pt-6 border-t border-black/5 dark:border-white/5">
             <p className="text-black/30 dark:text-white/30 text-sm font-bold uppercase tracking-widest">
-              Days Active : <span className="text-black dark:text-white">{leetcodeStats.daysActive}+</span>
+              Years Active : <span className="text-black dark:text-white">{leetcodeStats.yearsActive}+</span>
             </p>
           </div>
         </motion.a>

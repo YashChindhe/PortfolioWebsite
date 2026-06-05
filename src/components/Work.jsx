@@ -1,9 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import projects from '../data/projects'
 
 const Work = () => {
   const [activeCard, setActiveCard] = useState(null)
+  const [showAll, setShowAll] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 1023px)')
+    setIsMobile(mediaQuery.matches)
+
+    const handler = (e) => setIsMobile(e.matches)
+    mediaQuery.addEventListener('change', handler)
+    return () => mediaQuery.removeEventListener('change', handler)
+  }, [])
 
   const handleCardClick = (e, index) => {
     // On devices roughly less than LG (desktop styling breakpoint)
@@ -14,6 +25,10 @@ const Work = () => {
       }
     }
   }
+
+  const limit = isMobile ? 2 : 6
+  const displayedProjects = showAll ? projects : projects.slice(0, limit)
+  const hasMore = projects.length > limit
 
   return (
     <section id="work" className="min-h-fit lg:h-screen flex flex-col overflow-hidden" style={{ paddingTop: 'clamp(40px, 6vh, 80px)', paddingBottom: 'clamp(40px, 6vh, 80px)' }}>
@@ -28,7 +43,7 @@ const Work = () => {
       {/* Grid Container centered in the remaining height */}
       <div className="flex-1 flex flex-col justify-center items-center py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 max-w-[1400px] w-full">
-          {projects.map((project, i) => (
+          {displayedProjects.map((project, i) => (
             <motion.div
               key={i}
               className="flex flex-col bg-white dark:bg-[#080808] border border-black/[0.08] dark:border-white/[0.08] rounded-xl overflow-hidden transition-all duration-500 hover:border-black/20 dark:hover:border-white/20 w-full"
@@ -101,6 +116,31 @@ const Work = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* See More / See Less Button */}
+        {hasMore && (
+          <div className="flex justify-center mt-10 w-full">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="flex items-center gap-2 px-6 py-3 text-black dark:text-white rounded-lg font-bold text-[11px] uppercase tracking-wider transition-all duration-300 bg-transparent hover:opacity-75"
+            >
+              {showAll ? 'See Less' : 'See More'}
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className={`transform transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`}
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   )

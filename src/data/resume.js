@@ -10,8 +10,13 @@ export const resumeData = {
   intro: "Full Stack AI Developer specializing in building intelligent, scalable systems. With a strong foundation in AI & Data Science and hands-on experience in automation and distributed systems, I create extraordinary digital experiences.",
   education: [
     {
+      degree: "M.Tech Defence Technologies",
+      institution: "Indian Institute of Technology (IIT), Hyderabad",
+      period: "2026–2028",
+    },
+    {
       degree: "B.Tech Artificial Intelligence & Data Science",
-      institution: "Vishwakarma Institute of Technology, Pune",
+      institution: "Vishwakarma Institute of Technology (VIT), Pune",
       period: "2021–2025",
       details: "CGPA: 8.70/10"
     },
@@ -54,7 +59,7 @@ export const resumeData = {
     cloud: ["AWS", "Azure"],
     testing: ["Pytest", "Robot Framework"],
     frontend: ["HTML","CSS","Javascript","Typescript","React JS","Next JS"],
-    ai: ["Deep Learning","Gen AI"]
+    ai: ["Machine Learning","Deep Learning","Gen AI","Agentic AI"]
   },
   certifications: [
     {

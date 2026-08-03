@@ -49,6 +49,16 @@ const projects = [
     source: 'https://github.com/YashChindhe/SemanticVault',
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'pgvector', 'Hugging Face API', 'Framer Motion']
   },
+  {
+    id: 6,
+    title: 'Ashby Studio',
+    description: 'An n-dimensional 3D WebGL materials selection explorer, unsupervised machine learning clustering pipeline (K-Means & PCA), and engineering AI assistant for trade-off analysis.',
+    category: 'Full Stack AI & WebGL Application',
+    image: '/images/ashbystudio.png',
+    link: 'https://ashbystudiomsme.vercel.app/',
+    source: 'https://github.com/YashChindhe/AshbyStudio',
+    stack: ['FastAPI', 'Python', 'React', 'Plotly.js', 'WebGL', 'Scikit-Learn', 'OpenRouter', 'Llama 3.3', 'Pandas', 'Tailwind CSS']
+  },
 ]
 
 export default projects

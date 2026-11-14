@@ -1,7 +1,7 @@
 const projects = [
 {
     id: 1,
-    title: 'Smart PDF Earnings Call Auditor',
+    title: 'Smart Earnings Call Auditor',
     description: 'An automated forensic auditing pipeline utilizing a LangGraph multi-agent loop to detect mathematical and segment contradictions in earnings call transcripts.',
     category: 'Full Stack Agentic AI Application',
     image: '/images/call-auditor.png',

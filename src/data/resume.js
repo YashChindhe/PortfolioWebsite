@@ -1,13 +1,13 @@
 export const resumeData = {
   name: "YASH CHINDHE",
-  email: "chindhe1234@gmail.com",
+  email: "yashchindhe29@gmail.com",
   phone: "+91 8208403544",
   socials: {
     github: "https://github.com/YashChindhe",
     linkedin: "https://www.linkedin.com/in/yash-chindhe-9601a7226",
     x: "https://x.com/YashChindhe"
   },
-  intro: "Full Stack AI Developer specializing in building intelligent, scalable systems. With a strong foundation in AI & Data Science and hands-on experience in automation and distributed systems, I create extraordinary digital experiences.",
+  intro: "Full Stack AI Developer specializing in building intelligent and scalable systems with a strong foundation in AI and hands-on experience in automation and distributed systems.",
   education: [
     {
       degree: "M.Tech Defence Technologies",

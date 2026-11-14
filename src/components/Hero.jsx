@@ -60,7 +60,7 @@ const Hero = () => {
 
       {/* ── DESKTOP layout ── */}
       {/* PC: Vertically centered in the viewport */}
-      <div className="hidden sm:flex sm:flex-col sm:min-h-[85vh] justify-center">
+      <div className="hidden sm:flex sm:flex-col sm:min-h-[80vh] justify-center">
         {/* Name — massive, flush-left */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -80,10 +80,10 @@ const Hero = () => {
         </motion.div>
         
         {/* Bottom row: email left | intro right */}
-        {/* Adjusted padding to sit nicely below the centered name */}
+        {/* Adjusted padding to sit below the centered name */}
         <div
           className="flex items-end justify-between"
-          style={{ paddingTop: 'clamp(40px, 12vh, 180px)', paddingBottom: '20px' }}
+          style={{ paddingTop: 'clamp(50px, 15vh, 200px)', paddingBottom: '20px' }}
         >
           <motion.div
             initial={{ opacity: 0, y: 16 }}
